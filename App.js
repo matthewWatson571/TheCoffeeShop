@@ -1,11 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React, {useEffect, useState} from 'react';
 import {
   Pressable,
@@ -19,7 +11,7 @@ import {
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
-const App: () => React$Node = () => {
+const App: () => React.FC = () => {
   const [currentOrder, setCurrentOrder] = useState({name: '', waitTime: 0});
   const [readyOrders, setReadyOrders] = useState([]);
   const [queue, setQueue] = useState([]);
