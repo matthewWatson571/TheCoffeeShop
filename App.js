@@ -44,7 +44,6 @@ const App: () => React.FC = () => {
     }, 3000);
   }, [readyOrders]);
   const windowHeight = Dimensions.get('window').height;
-  console.log(currentOrder);
   return (
     <>
       <StatusBar barStyle="dark-content" />
