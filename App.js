@@ -30,6 +30,8 @@ const App: () => React.FC = () => {
           }
         }, currentOrder.waitTime * 1000);
       }
+    } else {
+      setCurrentOrder(null);
     }
   }, [queue, currentOrder, readyOrders]);
   useEffect(() => {
