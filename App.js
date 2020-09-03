@@ -34,12 +34,15 @@ const App: () => React.FC = () => {
   }, [queue, currentOrder, readyOrders]);
   useEffect(() => {
     setInterval(() => {
-      let newReadyOrders = readyOrders;
-      newReadyOrders.shift();
-      setReadyOrders(newReadyOrders);
+      if (readyOrders.length > 0) {
+        let newReadyOrders = readyOrders;
+        newReadyOrders.shift();
+        setReadyOrders(newReadyOrders);
+      }
     }, 3000);
   }, [readyOrders]);
   const windowHeight = Dimensions.get('window').height;
+  console.log(currentOrder);
   return (
     <>
       <StatusBar barStyle="dark-content" />
